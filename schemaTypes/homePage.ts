@@ -67,9 +67,21 @@ export const homePage = defineType({
       ],
     }),
     defineField({
+      name: 'sections',
+      type: 'pageBuilder',
+      title: 'Sections',
+      description: 'Add reusable sections to build your page content',
+    }),
+    defineField({
       name: 'content',
       type: 'array',
-      title: 'Content',
+      title: 'Content (Deprecated)',
+      deprecated: {
+        reason: 'Use the "Sections" field instead. This field will be removed in a future update.',
+      },
+      readOnly: true,
+      hidden: ({ value }) => value === undefined,
+      initialValue: undefined,
       of: [
         {
           type: 'block',

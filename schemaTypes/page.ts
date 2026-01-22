@@ -24,24 +24,10 @@ export const page = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'content',
-      type: 'array',
-      title: 'Content',
-      of: [
-        {
-          type: 'block',
-        },
-        {
-          type: 'image',
-          fields: [
-            {
-              name: 'alt',
-              type: 'string',
-              title: 'Alternative Text',
-            },
-          ],
-        },
-      ],
+      name: 'sections',
+      type: 'pageBuilder',
+      title: 'Sections',
+      description: 'Add reusable sections to build your page content',
     }),
     defineField({
       name: 'seo',
