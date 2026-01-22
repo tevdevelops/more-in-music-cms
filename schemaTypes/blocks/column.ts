@@ -3,6 +3,7 @@ import { SplitVerticalIcon } from '@sanity/icons'
 import { richTextBlock } from './richTextBlock'
 import { videoEmbedBlock } from './videoEmbedBlock'
 import { galleryBlock } from './galleryBlock'
+import { pageHeaderBlock } from './pageHeaderBlock'
 
 export const column = defineType({
   name: 'column',
@@ -18,6 +19,7 @@ export const column = defineType({
         defineArrayMember({ type: 'richTextBlock' }),
         defineArrayMember({ type: 'videoEmbedBlock' }),
         defineArrayMember({ type: 'galleryBlock' }),
+        defineArrayMember({ type: 'pageHeaderBlock' }),
       ],
     }),
   ],

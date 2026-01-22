@@ -9,6 +9,8 @@ import { pageBuilder } from './pageBuilder'
 import { richTextBlock } from './blocks/richTextBlock'
 import { videoEmbedBlock } from './blocks/videoEmbedBlock'
 import { galleryBlock } from './blocks/galleryBlock'
+import { pageHeaderBlock } from './blocks/pageHeaderBlock'
+import { buttonBlock } from './blocks/buttonBlock'
 import { column } from './blocks/column'
 
 export const schemaTypes = [
@@ -24,5 +26,7 @@ export const schemaTypes = [
   richTextBlock,
   videoEmbedBlock,
   galleryBlock,
+  pageHeaderBlock,
+  buttonBlock,
   column,
 ]

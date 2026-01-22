@@ -8,6 +8,27 @@ export const richTextBlock = defineType({
   icon: TextIcon,
   fields: [
     defineField({
+      name: 'alignment',
+      type: 'string',
+      title: 'Text Alignment',
+      options: {
+        list: [
+          { title: 'Left', value: 'left' },
+          { title: 'Center', value: 'center' },
+          { title: 'Right', value: 'right' },
+        ],
+        layout: 'radio',
+      },
+      initialValue: 'left',
+    }),
+    defineField({
+      name: 'sticky',
+      type: 'boolean',
+      title: 'Sticky Position',
+      description: 'Make this block stick to the top when scrolling',
+      initialValue: false,
+    }),
+    defineField({
       name: 'content',
       type: 'array',
       title: 'Content',
@@ -24,6 +45,9 @@ export const richTextBlock = defineType({
               title: 'Alternative Text',
             },
           ],
+        },
+        {
+          type: 'buttonBlock',
         },
       ],
     }),
