@@ -2,6 +2,7 @@ import { defineType, defineField, defineArrayMember } from 'sanity'
 import { SplitVerticalIcon } from '@sanity/icons'
 import { richTextBlock } from './richTextBlock'
 import { videoEmbedBlock } from './videoEmbedBlock'
+import { galleryBlock } from './galleryBlock'
 
 export const column = defineType({
   name: 'column',
@@ -16,6 +17,7 @@ export const column = defineType({
       of: [
         defineArrayMember({ type: 'richTextBlock' }),
         defineArrayMember({ type: 'videoEmbedBlock' }),
+        defineArrayMember({ type: 'galleryBlock' }),
       ],
     }),
   ],

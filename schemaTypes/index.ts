@@ -8,6 +8,7 @@ import { section } from './section'
 import { pageBuilder } from './pageBuilder'
 import { richTextBlock } from './blocks/richTextBlock'
 import { videoEmbedBlock } from './blocks/videoEmbedBlock'
+import { galleryBlock } from './blocks/galleryBlock'
 import { column } from './blocks/column'
 
 export const schemaTypes = [
@@ -22,5 +23,6 @@ export const schemaTypes = [
   pageBuilder,
   richTextBlock,
   videoEmbedBlock,
+  galleryBlock,
   column,
 ]
