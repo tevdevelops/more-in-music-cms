@@ -64,6 +64,42 @@ export const section = defineType({
       initialValue: false,
     }),
     defineField({
+      name: 'text',
+      type: 'string',
+      title: 'Section Heading',
+      description: 'Optional heading text (rendered as decorative h1 above the section content)',
+    }),
+    defineField({
+      name: 'textAlignment',
+      title: 'Heading Alignment',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Left', value: 'left' },
+          { title: 'Center', value: 'center' },
+          { title: 'Right', value: 'right' },
+        ],
+        layout: 'radio',
+      },
+      initialValue: 'center',
+      hidden: ({ parent }) => !(parent as { text?: string })?.text,
+    }),
+    defineField({
+      name: 'verticalAlign',
+      title: 'Vertical Align',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Top', value: 'top' },
+          { title: 'Middle', value: 'middle' },
+          { title: 'Bottom', value: 'bottom' },
+          { title: 'Stretch', value: 'stretch' },
+        ],
+        layout: 'radio',
+      },
+      initialValue: 'top',
+    }),
+    defineField({
       name: 'columns',
       type: 'array',
       title: 'Columns',
