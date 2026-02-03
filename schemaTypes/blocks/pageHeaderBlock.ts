@@ -14,6 +14,20 @@ export const pageHeaderBlock = defineType({
       description: 'Optional header text (rendered as h1)',
     }),
     defineField({
+      name: 'textAlignment',
+      title: 'Text Alignment',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Left', value: 'left' },
+          { title: 'Center', value: 'center' },
+          { title: 'Right', value: 'right' },
+        ],
+        layout: 'radio',
+      },
+      initialValue: 'center',
+    }),
+    defineField({
       name: 'image',
       type: 'image',
       title: 'Image',

@@ -50,6 +50,20 @@ export const section = defineType({
       },
     }),
     defineField({
+      name: 'disablePaddingTop',
+      type: 'boolean',
+      title: 'Disable padding top',
+      description: 'Remove top padding from this section',
+      initialValue: false,
+    }),
+    defineField({
+      name: 'disablePaddingBottom',
+      type: 'boolean',
+      title: 'Disable padding bottom',
+      description: 'Remove bottom padding from this section',
+      initialValue: false,
+    }),
+    defineField({
       name: 'columns',
       type: 'array',
       title: 'Columns',

@@ -14,6 +14,20 @@ export const buttonBlock = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: 'size',
+      title: 'Button Size',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Small', value: 'small' },
+          { title: 'Medium', value: 'medium' },
+          { title: 'Large', value: 'large' },
+        ],
+        layout: 'radio',
+      },
+      initialValue: 'medium',
+    }),
+    defineField({
       name: 'linkType',
       title: 'Link Type',
       type: 'string',
@@ -69,12 +83,13 @@ export const buttonBlock = defineType({
   preview: {
     select: {
       text: 'text',
+      size: 'size',
       linkType: 'linkType',
       url: 'url',
       pageTitle: 'pageReference.title',
       pageSlug: 'pageReference.slug.current',
     },
-    prepare({ text, linkType, url, pageTitle, pageSlug }) {
+    prepare({ text, size, linkType, url, pageTitle, pageSlug }) {
       let subtitle = 'No link'
       if (linkType === 'url' && url) {
         subtitle = url
@@ -87,9 +102,10 @@ export const buttonBlock = defineType({
           subtitle = 'Internal Page'
         }
       }
+      const sizeLabel = size ? `${size.charAt(0).toUpperCase() + size.slice(1)} · ` : ''
       return {
         title: text || 'Button',
-        subtitle,
+        subtitle: sizeLabel + subtitle,
         media: LinkIcon,
       }
     },
