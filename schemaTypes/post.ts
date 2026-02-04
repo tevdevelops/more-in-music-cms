@@ -41,12 +41,15 @@ export const post = defineType({
       name: 'body',
       type: 'array',
       title: 'Body',
+      description:
+        'Rich text content (headings, paragraphs, images) shown as the main post content.',
       of: [
         {
           type: 'block',
         },
         {
           type: 'image',
+          options: { hotspot: true },
           fields: [
             {
               name: 'alt',

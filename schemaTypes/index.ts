@@ -10,6 +10,8 @@ import { richTextBlock } from './blocks/richTextBlock'
 import { videoEmbedBlock } from './blocks/videoEmbedBlock'
 import { galleryBlock } from './blocks/galleryBlock'
 import { pageHeaderBlock } from './blocks/pageHeaderBlock'
+import { eventCardsBlock } from './blocks/eventCardsBlock'
+import { blogCardsBlock } from './blocks/blogCardsBlock'
 import { buttonBlock } from './blocks/buttonBlock'
 import { column } from './blocks/column'
 
@@ -27,6 +29,8 @@ export const schemaTypes = [
   videoEmbedBlock,
   galleryBlock,
   pageHeaderBlock,
+  eventCardsBlock,
+  blogCardsBlock,
   buttonBlock,
   column,
 ]

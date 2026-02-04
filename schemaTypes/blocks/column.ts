@@ -4,6 +4,8 @@ import { richTextBlock } from './richTextBlock'
 import { videoEmbedBlock } from './videoEmbedBlock'
 import { galleryBlock } from './galleryBlock'
 import { pageHeaderBlock } from './pageHeaderBlock'
+import { eventCardsBlock } from './eventCardsBlock'
+import { blogCardsBlock } from './blogCardsBlock'
 
 export const column = defineType({
   name: 'column',
@@ -20,6 +22,8 @@ export const column = defineType({
         defineArrayMember({ type: 'videoEmbedBlock' }),
         defineArrayMember({ type: 'galleryBlock' }),
         defineArrayMember({ type: 'pageHeaderBlock' }),
+        defineArrayMember({ type: 'eventCardsBlock' }),
+        defineArrayMember({ type: 'blogCardsBlock' }),
       ],
     }),
   ],

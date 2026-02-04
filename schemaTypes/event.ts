@@ -36,12 +36,38 @@ export const event = defineType({
       options: {
         hotspot: true,
       },
-      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'rsvpLink',
+      type: 'url',
+      title: 'RSVP Link',
     }),
     defineField({
       name: 'description',
       type: 'text',
       title: 'Description',
+    }),
+    defineField({
+      name: 'body',
+      type: 'array',
+      title: 'Body',
+      description: 'Rich text content (headings, paragraphs, images) shown below the description.',
+      of: [
+        {
+          type: 'block',
+        },
+        {
+          type: 'image',
+          options: { hotspot: true },
+          fields: [
+            {
+              name: 'alt',
+              type: 'string',
+              title: 'Alternative Text',
+            },
+          ],
+        },
+      ],
     }),
     defineField({
       name: 'location',
