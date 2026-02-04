@@ -6,6 +6,7 @@ import { galleryBlock } from './galleryBlock'
 import { pageHeaderBlock } from './pageHeaderBlock'
 import { eventCardsBlock } from './eventCardsBlock'
 import { blogCardsBlock } from './blogCardsBlock'
+import { contactFormBlock } from './contactFormBlock'
 
 export const column = defineType({
   name: 'column',
@@ -24,6 +25,7 @@ export const column = defineType({
         defineArrayMember({ type: 'pageHeaderBlock' }),
         defineArrayMember({ type: 'eventCardsBlock' }),
         defineArrayMember({ type: 'blogCardsBlock' }),
+        defineArrayMember({ type: 'contactFormBlock' }),
       ],
     }),
   ],

@@ -13,6 +13,7 @@ import { pageHeaderBlock } from './blocks/pageHeaderBlock'
 import { eventCardsBlock } from './blocks/eventCardsBlock'
 import { blogCardsBlock } from './blocks/blogCardsBlock'
 import { buttonBlock } from './blocks/buttonBlock'
+import { contactFormBlock } from './blocks/contactFormBlock'
 import { column } from './blocks/column'
 
 export const schemaTypes = [
@@ -32,5 +33,6 @@ export const schemaTypes = [
   eventCardsBlock,
   blogCardsBlock,
   buttonBlock,
+  contactFormBlock,
   column,
 ]
